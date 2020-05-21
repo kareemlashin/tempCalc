@@ -146,7 +146,7 @@
 
 [dir='ltr'] .item-chose .col-md-3 .price-bedge {
   top: 6px;
-  right: -4px !important;
+  right: -3px !important;
 }
 
 @media (min-width: 767px) and (max-width: 768px) {
@@ -169,7 +169,7 @@
 @media (max-width: 700px) {
   [dir='ltr'] .item-chose .col-md-3 .price-bedge {
     top: 10px;
-    right: 10px;
+    right: 15px !important;
   }
 }
 
