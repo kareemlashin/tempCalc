@@ -19,6 +19,20 @@ $(document).ready(function() {
      });
  }
  $('select').niceSelect();
+ 
+$("select").change(function(){
+     let z=$(this).val();
+     let r=$('select').index(this);
+    let staticPrice= $(".price-select").eq( r ).attr("price");
+     $(".price-select").eq( r ).text(z*staticPrice);
+});
+$('input[type=range]').change(function(){
+     let z=$(this).val();
+     let r=$('input[type=range]').index(this);
+    let staticPrice= $(".price-range").eq( r ).attr("price");
+     $(".price-range").eq( r ).text(z*staticPrice);
+});
 
 
 })
+//2101120150101093
