@@ -6,12 +6,21 @@ $secondColor:#F35B67;
 }
 
 [dir='rtl'] {
-
+     .pretty .state label:after, .pretty .state label:before {
+        
+          right: 0 !important;
+   
+      }
+      .state .svg {
+        
+          right: 0;
+     
+      }
      .item-chose {
           .col-md-3 {
                .price-bedge {
                  
-                    top: 6px;
+                    top: 10px;
                     left: 0;
                }
           }
@@ -217,12 +226,21 @@ $secondColor:#F35B67;
 }
 
 [dir='ltr'] {
-
+     .pretty .state label:after, .pretty .state label:before {
+        
+          left: 0 !important;
+   
+      }
+      .state .svg {
+        
+          left: 0;
+     
+      }
      .item-chose {
           .col-md-3 {
                .price-bedge {
                  
-                    top: 6px;
+                    top: 10px;
                     right: -3px !important;
                }
           }
@@ -1281,3 +1299,14 @@ header {
      }
 }
 
+input:checked~.state.p-success-o label:before, .pretty.p-toggle .state.p-success-o label:before {
+     border-color: $mainColor;
+ }
+ .pretty.p-default:not(.p-fill) input:checked~.state.p-success-o label:after {
+     background-color: $mainColor!important;
+ }
+ .pretty .state label:before {
+     border-color: $mainColor;
+ }
+ 
+ 

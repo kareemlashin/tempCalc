@@ -6,8 +6,16 @@
   color: #319EAC;
 }
 
+[dir='rtl'] .pretty .state label:after, [dir='rtl'] .pretty .state label:before {
+  right: 0 !important;
+}
+
+[dir='rtl'] .state .svg {
+  right: 0;
+}
+
 [dir='rtl'] .item-chose .col-md-3 .price-bedge {
-  top: 6px;
+  top: 10px;
   left: 0;
 }
 
@@ -144,8 +152,16 @@
   color: #319EAC;
 }
 
+[dir='ltr'] .pretty .state label:after, [dir='ltr'] .pretty .state label:before {
+  left: 0 !important;
+}
+
+[dir='ltr'] .state .svg {
+  left: 0;
+}
+
 [dir='ltr'] .item-chose .col-md-3 .price-bedge {
-  top: 6px;
+  top: 10px;
   right: -3px !important;
 }
 
@@ -1042,4 +1058,16 @@ header p {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   font-size: 14px;
+}
+
+input:checked ~ .state.p-success-o label:before, .pretty.p-toggle .state.p-success-o label:before {
+  border-color: #319EAC;
+}
+
+.pretty.p-default:not(.p-fill) input:checked ~ .state.p-success-o label:after {
+  background-color: #319EAC !important;
+}
+
+.pretty .state label:before {
+  border-color: #319EAC;
 }
