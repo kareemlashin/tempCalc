@@ -33,6 +33,26 @@ $('input[type=range]').change(function(){
      $(".price-range").eq( r ).text(z*staticPrice);
 });
 
+$('input[type=number]').change(function(){
+     let z=$(this).val();
+     let r=$('input[type=number]').index(this);
+    let staticPrice= $(".price-inp-number").eq( r ).attr("price");
+     $(".price-inp-number").eq( r ).text(z*staticPrice);
+});
 
+ $(document).mouseup(function (e) {
+     let container = $('.box-popup-list');
+     if (!container.is(e.target)
+       && container.has(e.target).length === 0) {
+       $('#popup-box').hide();
+     }
+   });
+   let toDay=new Date();
+   let day = toDay.getDate();
+let month = toDay.getMonth() + 1;
+let year = toDay.getFullYear();
+$(".day-list").text(`${day} - ${month} - ${year}`)
+  $(".btn-view-list").click(function(){
+       $("#popup-box").css({display:"flex"})
+  })
 })
-//2101120150101093
