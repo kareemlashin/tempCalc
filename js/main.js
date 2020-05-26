@@ -54,5 +54,37 @@ let year = toDay.getFullYear();
 $(".day-list").text(`${day} - ${month} - ${year}`)
   $(".btn-view-list").click(function(){
        $("#popup-box").css({display:"flex"})
-  })
+  });
+
+  $('.custom_select .dropdown > .caption').on('click', function() {
+     $(this).parent().toggleClass('open');
+   });
+   
+   $('.custom_select .dropdown > .list > .item').on('click', function() {
+     $('.custom_select .dropdown > .list > .item').removeClass('selected');
+     $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').html( $(this).html() );
+     let y =$(this).attr("value");   
+     let r=$('.custom_select .dropdown').index(this);
+     let staticPrice= $(".price-custom-select").eq( r ).attr("price");
+      $(".price-custom-select").eq( r ).text(y*staticPrice);
+  
+
+
+});
+   
+   $(document).on('keyup', function(evt) {
+     if ( (evt.keyCode || evt.which) === 27 ) {
+       $('.custom_select .dropdown').removeClass('open');
+     }
+   });
+   
+   $(document).on('click', function(evt) {
+     if ( $(evt.target).closest(".custom_select .dropdown > .caption").length === 0 ) {
+       $('.custom_select .dropdown').removeClass('open');
+     }
+   });
 })
+
+  
+    
+     

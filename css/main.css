@@ -6,6 +6,14 @@
   color: #319EAC;
 }
 
+[dir='rtl'] .custom_select div.dropdown > div.caption {
+  border-right: 5px solid #F35B67;
+}
+
+[dir='rtl'] .custom_select .down-arrow {
+  left: 2%;
+}
+
 [dir='rtl'] .right-left {
   float: left;
 }
@@ -35,7 +43,8 @@
   text-align: left;
 }
 
-[dir='rtl'] .pretty .state label:after, [dir='rtl'] .pretty .state label:before {
+[dir='rtl'] .pretty .state label:after,
+[dir='rtl'] .pretty .state label:before {
   right: 0 !important;
 }
 
@@ -178,7 +187,8 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  [dir='rtl'] .selection label, [dir='rtl'] .system .selection label {
+  [dir='rtl'] .selection label,
+  [dir='rtl'] .system .selection label {
     padding: 0.4em !important;
     font-size: 15px !important;
   }
@@ -186,6 +196,14 @@
 
 [dir='ltr'] {
   color: #319EAC;
+}
+
+[dir='ltr'] .custom_select div.dropdown > div.caption {
+  border-left: 5px solid #F35B67;
+}
+
+[dir='ltr'] .custom_select .down-arrow {
+  right: 2%;
 }
 
 [dir='ltr'] .right-left {
@@ -228,7 +246,8 @@
   text-align: right;
 }
 
-[dir='ltr'] .pretty .state label:after, [dir='ltr'] .pretty .state label:before {
+[dir='ltr'] .pretty .state label:after,
+[dir='ltr'] .pretty .state label:before {
   left: 0 !important;
 }
 
@@ -361,7 +380,8 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  [dir='ltr'] .selection label, [dir='ltr'] .system .selection label {
+  [dir='ltr'] .selection label,
+  [dir='ltr'] .system .selection label {
     padding: 0.4em !important;
     font-size: 15px !important;
   }
@@ -1149,7 +1169,8 @@ header p {
   font-size: 14px;
 }
 
-input:checked ~ .state.p-success-o label:before, .pretty.p-toggle .state.p-success-o label:before {
+input:checked ~ .state.p-success-o label:before,
+.pretty.p-toggle .state.p-success-o label:before {
   border-color: #319EAC;
 }
 
@@ -1221,7 +1242,8 @@ input[type=email],
 input[type=tel],
 input[type=text],
 textarea,
-input[type=number], button {
+input[type=number],
+button {
   outline: none !important;
 }
 
@@ -1461,4 +1483,78 @@ tbody tr:nth-child(even) {
 
 .nice-select.open .list {
   z-index: 999999;
+}
+
+.custom_select div.container2 {
+  margin: 5px auto;
+  width: 100% !important;
+  background-color: transparent;
+}
+
+.custom_select div.dropdown {
+  position: relative;
+}
+
+.custom_select div.dropdown > div.caption {
+  background-color: #fff;
+  padding: 11px 24px;
+  border: 1px solid #c3c3c3;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.custom_select div.dropdown > div.list {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+  display: none;
+  z-index: 999999;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+.custom_select div.dropdown > div.list > div.item {
+  padding: 11px 24px;
+  cursor: pointer;
+}
+
+.custom_select div.dropdown > div.list > div.item:not(:last-of-type) {
+  border-bottom: 1px solid #c3c3c3;
+}
+
+.custom_select div.dropdown > div.list > div.item.selected {
+  font-weight: bold;
+}
+
+.custom_select div.dropdown.open > div.caption {
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.custom_select div.dropdown.open > div.list {
+  display: block;
+}
+
+.custom_select .down-arrow {
+  position: absolute;
+  top: 40%;
+}
+
+.custom_select p {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+
+.custom_select .list .item p {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0rem;
 }
